@@ -4,12 +4,6 @@ sidebar_position: 3
 
 # 可供查询的数据列
 
-## `path`
-
-类型：`VARCHAR(255)`
-
-图片的url。格式为 `https://pictures.mycdn.com/compressed/<图片名>.webp`。
-
 ## `size`
 
 类型：`INT`
