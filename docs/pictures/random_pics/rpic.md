@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # 普通版
@@ -10,7 +10,7 @@ sidebar_position: 1
 
 https://pictures.myapi.com/pics/rpic
 
-在所有的图片中，返回一张随机图片。
+在 `pixiv` 图片集中，返回一张随机图片。
 
 ## 最佳示例
 
@@ -33,6 +33,12 @@ https://pictures.myapi.com/pics/rpic?landscape=0&small_res=0&big_size=0&nobjn
 当指定多个参数时，它们的关系是“和，并且”（即 SQL 中的 `AND`）。
 
 ## 查询参数
+
+### `class`
+
+选择随机图片的图片集。可供选择的图片集见：[类别（可供查询的数据表）](tables)
+
+如果不指定，默认为 `pixiv`。
 
 ### `landscape`
 
@@ -70,6 +76,6 @@ https://pictures.myapi.com/pics/rpic?landscape=0&small_res=0&big_size=0&nobjn
 
 ### `nobjn`
 
-如果不提供该参数，那么默认两种图片都有，也就是sql语句中不会有该条件。否则，将过滤掉 bjn 图片。
+如果不提供该参数，那么默认两种图片都在随机范围之内，也就是sql语句中不会有该条件。否则，将过滤掉 bjn 图片。
 
 bjn (比基尼) 图片是指有些性吸引力，但是主要用于突出艺术气息的图片，包括但不限于泳装等。若对此类图片有所顾虑，可以使用该参数。
