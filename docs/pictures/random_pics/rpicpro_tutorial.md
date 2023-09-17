@@ -45,7 +45,7 @@ select `url` from `pixiv` where ( `landscape` = 0 and `near_square` = 0 ) and ( 
 我们可以看到：
 
 - 只需要写表名和 where 条件，不需要写 `select` 、 `from` 和被选择的列。
-- where 条件里的所有单词、运算符、括号都需要用空格隔开。没有空格的会被视为一个单词。
+- where 条件里的所有单词、运算符、括号都需要用空格隔开。没有空格隔开的两个元素会被视为一个单词。
 - 所有的列名和表名都会自动添加反引号 " ` "。
 
 如果指定了表名但是没有任何 where 条件指定，比如：
@@ -60,7 +60,7 @@ https://pictures.myapi.com/pics/rpicpro?pixiv
 
 为了防止 SQL 注入攻击，where 条件输入的内容被严格限制。目前，允许输入的内容为：
 
-- 允许输入的列名吗，参见：[可供查询的数据列](columns)
+- 允许输入的列名，参见：[可供查询的数据列](columns)
 - 允许输入的运算符：`=`, `<>`, `>`, `<`, `>=`, `<=`
 - 允许输入的逻辑运算符：`and`, `or`, `not`，必须是小写
 - 英文小括号：`(`, `)`
@@ -82,7 +82,6 @@ https://pictures.myapi.com/pics/rpicpro?all= landscape = 1
 如果既指定了 `all` 参数，又指定了其他图片集，那么在其他图片集中指定的 where 条件会覆盖 `all` 参数中的 where 条件。例如：
 
 ```text
-
 https://pictures.myapi.com/pics/rpicpro?all= landscape = 1&pixiv= landscape = 0
 ```
 
