@@ -50,6 +50,6 @@ jobs:
           branch: main
           # Optional: Change the working directory
           # All my website content is in the site folder
-          workingDirectory: ./build
+          workingDirectory: ./
           # Optional: Change the Wrangler version, allows you to point to a specific version or a tag such as `beta`
           wranglerVersion: '3'
